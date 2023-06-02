@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Navbar container */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 15px;
+    }
+
+    /* Change the color of navbar links on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Highlight the current active navbar link */
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* Carousel container */
+    .carousel {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Carousel images */
+    .carousel img {
+      width: 100%;
+      height: 20%;
+    }
+    .view-all-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+      
+      .animated-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #337ab7;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .animated-button:hover {
+        background-color: #b6bcc2;
+      }
+      
+      .animated-button .arrow {
+        margin-left: 5px;
+        transition: margin-left 0.3s ease;
+      }
+      
+      .animated-button:hover .arrow {
+        margin-left: 10px;
+      }
+      
+
+    /* Animated transition banner */
+    .transition-banner {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: slideBanner 10s infinite;
+    }
+
+    .transition-banner img {
+      width: 60%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-left: 30px;
+
+    }
+
+    @keyframes slideBanner {
+      0% {
+        transform: translateX(0);
+      }
+      33.33% {
+        transform: translateX(-100%);
+      }
+      66.66% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+      }
+    
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-left:150px;
+      }
+    
+      .footer-item {
+        flex: 0 0 30%;
+        margin-right: 20px;
+      }
+    
+      .footer-item h4 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    
+      .footer-item p {
+        margin-bottom: 10px;
+      }
+    
+      .social-media {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .social-media li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    
+      .social-media li a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .contact-icon {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #266eae;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+  
+      .contact-icon:hover {
+        transform: scale(1.1);
+      }
+  
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        width: 400px;
+        height:200px;
+        color:white;
+        background-color: #266eae;
+      }
+      
+      .popup-content {
+        text-align: center;
+        margin-top: 20px;
+      }
+      
+      .popup h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .popup p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      
+      .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+      }
+      
+      .popup-close:hover {
+        color: #333333;
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+  
+      .card {
+        width: 250px;
+        height: 350px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+  
+      .card img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+      }
+  
+      .card-heading {
+        padding: 10px;
+        background-color: #f5f5f5;
+        font-weight: bold;
+      }
+  
+      .card-description {
+        padding: 10px;
+        display: none;
+      }
+  
+      .card:hover {
+        transform: scale(1.05);
+      }
+  
+      .card:hover .card-description {
+        display: block;
+      }
+  
+      .balance-card {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+      }
+  
+      .balance-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  
+      .card-container:hover .balance-card {
+        transform: translateY(0);
+      }
+      
+  </style>
+  <!-- Add the Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body  style=" background: linear-gradient(to right, rgba(248, 246, 246, 0.636), rgba(241, 245, 241, 0.778));">
+
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="/">Logout</a>
+    </div><br>
+
+
+  <!-- Carousel section -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/image/cmd.jpg" alt="1">
+      </div>
+      <div class="carousel-item">
+        <img src="static/image/cdc.jpg" alt="2">
+      </div>
+      <div class="carousel-item">
+        <img src="static/image/3.jpg" alt="3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="static/image/Tri1.jpg" alt="Image 1">
+      <div class="card-heading">Card 1</div>
+      <div class="card-description">Description for Card 1</div>
+    </div>
+    <div class="card">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="card-heading">Card 2</div>
+      <div class="card-description">Description for Card 2</div>
+    </div>
+    <div class="card">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="card-heading">Card 3</div>
+      <div class="card-description">Description for Card 3</div>
+    </div>
+    <div class="card">
+      <img src="image4.jpg" alt="Image 4">
+      <div class="card-heading">Card 4</div>
+      <div class="card-description">Description for Card 4</div>
+    </div>
+    
+    <div class="card">
+      <img src="image6.jpg" alt="Image 6">
+      <div class="card-heading">Card 6</div>
+      <div class="card-description">Description for Card 6</div>
+    </div>
+  </div>
+
+  <div class="balance-card">
+    <img src="balance.jpg" alt="Balance Card">
+  </div>
+
+  <!-- Card section -->
+  
+  <!-- View all places link -->
+  <div class="view-all-link">
+    <a href="{% url 'gallery' %}" class="animated-button">View All Places <span class="arrow">>>></span></a>
+  </div><br><br><br>
+  
+
+
+  <div class="contact-icon" onclick="togglePopup()">
+    <i class="fas fa-headset"></i>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>Call now to book:</h3>
+      <p>Phone: <strong>+91-9048289199</strong></p>
+      <i class="fas fa-phone" style="font-size:40px"></i>
+    </div>
+    <span class="popup-close" onclick="togglePopup()">&times;</span>
+  </div>
+  
+  <!-- Existing JavaScript code -->
+  
+
+  
+
+
+  <script>
+    function togglePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = popup.style.display === "none" ? "block" : "none";
+    }
+  </script>
+  <!-- Add the Bootstrap JavaScript links -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function goToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
+

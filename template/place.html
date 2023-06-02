@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Navbar container */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 15px;
+    }
+
+    /* Change the color of navbar links on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+   
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+      }
+    
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-left:150px;
+      }
+    
+      .footer-item {
+        flex: 0 0 30%;
+        margin-right: 20px;
+      }
+    
+      .footer-item h4 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    
+      .footer-item p {
+        margin-bottom: 10px;
+      }
+    
+      .social-media {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .social-media li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    
+      .social-media li a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+      }
+  </style>
+  <!-- Add the Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body style=" background: linear-gradient(to right, rgba(169, 169, 169, 0.66), rgb(135, 137, 135));">
+
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="/">Logout</a>
+    </div><br>
+
+  <main class="container my-5">
+    <h1 class="text-center mb-5">MOST VISITED PLACE IN KERALA</h1>
+    <p class="lead text-center"><i>"Kerala A place where your dreams set sail"</i></p>
+
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TRIVANDRUM</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/Tri1.jpg" alt="kerala" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/tri2.jpg" alt="kerala" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/tri3.jpg" alt="kerala" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Trivandrum is a state in the Republic of India. It is in the south-west of the country.
+                    The west coast of the state is on the Arabian Sea. Tamil Nadu and Karnataka are to the east.
+
+                    The capital city of the state is Thiruvananthapuram, even though the city of Kochi is more
+                    densely populated. The area of Kerala is 15,005 mi2 (38,863 km2), which is bigger than Bhutan
+                    but smaller than Switzerland. In traditional Indian geography, it is part of South India.
+
+                    There are 14 districts in Kerala. They are Alappuzha, Ernakulam, Idukki, Kannur, Kasaragod,
+                    Kollam, Kottayam, Kozhikode, Malappuram, Palakkad, Pathanamthitta, Thiruvananthapuram, Thrissur,
+                    and Wayanad.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KOLLAM</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol3.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Kollam has many sites of Pre-historic period and most of them have found
+                    scattered on the river valleys of Krishna, Bhima, Malaprabha, Ghataprabha, Cauvery, Hemavathi,
+                    Shimsha, Tungabhadra, Manjra, Pennar, and Netravati and on their tributaries. It is very
+                    interesting to note that the Pre-historic studies in India started with the discovery of ash
+                    mounds at Kupgal and Kudatini in 1836 by Cuebold, a British officer in Ballari region, which
+                    then formed part of Madras Presidency.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ALAPPEY</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/ala1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/ala2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/jammu.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">ALAPPEY (listen), abbr. TN) is a state
+                    in southern India. The tenth largest Indian state by area and the sixth largest by population,
+                    Tamil Nadu is the home of the Tamil people, whose Tamil language—one of the longest surviving
+                    classical languages in the world—is widely spoken in the state and serves as its official
+                    language. The capital and largest city is Chennai.
+                    Located in the southernmost part of the Indian peninsula, Tamil Nadu is bordered by the Indian
+                    union territory of Puducherry and states of Kerala, Karnataka, and Andhra Pradesh, as well as an
+                    international maritime border with Sri Lanka.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PATHANAMTHITTA</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/3.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Pathanamthitta (English: /mʊmˈbaɪ/ (listen), Marathi: [ˈmumbəi]; also known as Bombay
+                    /bɒmˈbeɪ/— the official name until 1995) is the capital city of the Indian state of Maharashtra
+                    and the de facto financial centre of India. According to the United Nations, as of 2018, Mumbai
+                    is the second-most populous city in India (after Delhi), and the eighth-most populous city in
+                    the world, with a population of roughly 20 million (2 crore).[16] As per the Indian government
+                    population census of 2011, Mumbai was the most populous city in India, with an estimated city
+                    proper population of 12.5 million (1.25 crore) living under the Brihanmumbai Municipal
+                    Corporation.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">IDUKKI</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/delhi.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/karnataka.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/punjab.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Idukki (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KOTTAYAM</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol3.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Kottayam (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ERNAKULAM</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol2.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol3.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Ernakulam (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TRISSUR</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Trissur (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PALAKKAD</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">MALAPPURAM</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KOZHIKODE</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">WAYANAD</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KANNUR</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="my-5">
+        <h2 class="text-white bg-primary py-3 px-4 mb-4"
+            style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KASARGOD</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/image/kol1.jpg" alt="wayanad" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Gujarat (/ˌɡʊdʒəˈrɑːt/ GUUJ-ə-RAHT, Gujarati: [ˈɡudʒəɾat̪] (listen)) is a state
+                    along the western coast of India. Its coastline of about 1,600 km (990 mi) is the longest in the
+                    country, most of which lies on the Kathiawar peninsula. Gujarat is the fifth-largest Indian
+                    state by area, covering some 196,024 km2 (75,685 sq mi); and the ninth-most populous state, with
+                    a population of 60.4 million. It is bordered by Rajasthan to the northeast, Dadra and Nagar
+                    Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east,
+                    and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+</main>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget fermentum velit. Sed auctor fringilla arcu, eu lobortis dolor facilisis in. Vestibulum consectetur diam in nunc condimentum, sit amet pharetra est fringilla. In bibendum efficitur mauris ac malesuada. Donec aliquam odio arcu.</p>
+      </div>
+      <div class="footer-item">
+        <h4>Contact Us</h4>
+        <p>Email: info@example.com</p>
+        <p>Phone: +1 123 456 7890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+      </div>
+      <div class="footer-item">
+        <h4>Follow Us</h4>
+        <ul class="social-media">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add the Bootstrap JavaScript links -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

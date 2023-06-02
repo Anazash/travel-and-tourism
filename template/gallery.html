@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add the Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <style>
+    /* Custom CSS */
+    .navbar {
+      background-color: #1b5d89;
+      padding: 25px;
+    }
+    
+    .navbar-brand {
+      color: #fff;
+      margin-left: -120px;
+    }
+    
+    .nav-link {
+      color: #fff;
+      transition: color 0.3s;
+      border-right: 1px solid rgb(179, 175, 175);
+    }
+    
+    .nav-link:hover {
+      color: #ffc107;
+      transform: scale(1.1);
+    }
+    
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+      
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .nav-item {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .social-icons i {
+      color: #fff;
+      margin-right: 10px;
+      transition: color 0.3s;
+      
+    }
+    
+    .social-icons i:hover {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Logo</a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Experience Kerala</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Where to Go</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Where to Stay</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Things to Do</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plan Your Trip</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Travel Care</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+        <li class="nav-item social-icons">
+          <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li class="nav-item social-icons">
+          <a class="nav-link" href="#"><i class="fab fa-whatsapp"></i></a>
+        </li>
+        <li class="nav-item social-icons">
+          <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item social-icons">
+          <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Add the Bootstrap JS link -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      width: 250px;
+      height: 350px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .card-heading {
+      padding: 10px;
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+
+    .card-description {
+      padding: 10px;
+      display: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card:hover .card-description {
+      display: block;
+    }
+
+    .balance-card {
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .balance-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-container:hover .balance-card {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <img src="static/image/Tri1.jpg" alt="Image 1">
+      <div class="card-heading">Card 1</div>
+      <div class="card-description">Description for Card 1</div>
+    </div>
+    <div class="card">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="card-heading">Card 2</div>
+      <div class="card-description">Description for Card 2</div>
+    </div>
+    <div class="card">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="card-heading">Card 3</div>
+      <div class="card-description">Description for Card 3</div>
+    </div>
+    <div class="card">
+      <img src="image4.jpg" alt="Image 4">
+      <div class="card-heading">Card 4</div>
+      <div class="card-description">Description for Card 4</div>
+    </div>
+    
+    <div class="card">
+      <img src="image6.jpg" alt="Image 6">
+      <div class="card-heading">Card 6</div>
+      <div class="card-description">Description for Card 6</div>
+    </div>
+  </div>
+
+  <div class="balance-card">
+    <img src="balance.jpg" alt="Balance Card">
+  </div>
+</body>
+</html>
